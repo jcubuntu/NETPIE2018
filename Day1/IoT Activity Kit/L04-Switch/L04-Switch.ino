@@ -1,5 +1,5 @@
-#define SWPIN D3
-#define LEDPIN LED_BUILTIN
+#define SWPIN D7
+#define LEDPIN D0
 
 void setup() {
   pinMode(LEDPIN, OUTPUT); // Set as output
@@ -7,10 +7,10 @@ void setup() {
 }
 
 void loop(){
-  if (digitalRead(SWPIN) == HIGH){
-    digitalWrite(LEDPIN,LOW);
+  if (digitalRead(SWPIN) == LOW){
+    digitalWrite(LEDPIN,HIGH);
   }
   else{
-    digitalWrite(LEDPIN,HIGH);
+    digitalWrite(LEDPIN,LOW);
   }
 }

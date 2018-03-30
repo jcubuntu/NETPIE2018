@@ -1,14 +1,13 @@
+#include <Wire.h>
 #include <Adafruit_SSD1306.h>
 #include <Adafruit_GFX.h>
-#include <Wire.h>
 
 #define OLED_RESET  -1
-
 Adafruit_SSD1306 display(OLED_RESET);
 
 void setup() {
   pinMode(A0,INPUT); 
-  display.begin(SSD1306_SWITCHCAPVCC,0x3C);
+  display.begin(SSD1306_SWITCHCAPVCC);
   display.clearDisplay();
   display.setTextSize(1);
   display.setTextColor(WHITE); 

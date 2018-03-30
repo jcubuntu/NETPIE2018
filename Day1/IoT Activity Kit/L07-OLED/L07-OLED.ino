@@ -1,15 +1,9 @@
-#include <ESP_SSD1306.h>
+#include <Wire.h>
+#include <Adafruit_SSD1306.h>
 #include <Adafruit_GFX.h>
-#include <Wire.h> 
 
-#define OLED_RESET  16
-#define NUMFLAKES   10
-#define XPOS        0
-#define YPOS        1
-#define DELTAY      2
-
-
-ESP_SSD1306 display(OLED_RESET);
+#define OLED_RESET  -1
+Adafruit_SSD1306 display(OLED_RESET);
 
 
 void setup() {

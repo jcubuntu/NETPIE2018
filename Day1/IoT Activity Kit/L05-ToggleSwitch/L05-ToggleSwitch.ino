@@ -1,5 +1,5 @@
-#define SWPIN D3
-#define LEDPIN LED_BUILTIN
+#define SWPIN D7
+#define LEDPIN D0
 int buttonState = 0;
 int ledState = 0;
 
@@ -11,10 +11,9 @@ void loop() {
   int  reading = digitalRead(SWPIN);
   
   if(buttonState != reading){
-    delay(100);
+    delay(300);
     buttonState = reading;
-    
-    if (buttonState == HIGH) {
+    if (buttonState == LOW) {
       ledState = !ledState;
     }
   }
